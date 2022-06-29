@@ -5,12 +5,21 @@ import './TopBar.css';
 
 function TopBar({title}) {
     const [popup, setPop] = useState(false);
+    const [openAccount, setOpenAccount] = useState(false);
     const handleClickOpen = () =>{
         setPop(!popup);
     }
     const handleClose = () => {
         setPop(false)
     }
+
+    const handleClickOpenAccount = () =>{
+        setOpenAccount(!openAccount);
+    }
+    const handleCloseAccount = () => {
+        setOpenAccount(false)
+    }
+
     return (
         <>
             <div className='Topbar__header'>
@@ -39,7 +48,7 @@ function TopBar({title}) {
                     </div>
 
                     <div className='dash' />
-                    <div className='Topbar__list-item_avatar'>
+                    <div className='Topbar__list-item_avatar' onClick={handleClickOpenAccount}>
                         <img src={images.ProfilePic} alt='profile' />
                     </div>
                 </div>
@@ -85,6 +94,51 @@ function TopBar({title}) {
                                     <p>Polygon</p>
                                 </div>
 
+                            </div>
+                        </div>
+                    </div>
+                </div>:""}
+
+                {/* account */}
+                {openAccount ?
+                <div className='account-model'>
+                    <div className='account'>
+                        <div className='account-header'>
+                            <div className='account-header-close' onClick={handleCloseAccount}>
+                                <img src={images.CloseModal} alt="" />
+                            </div>
+                        </div>
+                        <div className='account-container'>
+                            <div className='account-container_avatar'>
+                                <img src={images.ProfilePic} alt="" />
+                            </div>
+                            <div className='account-container_title'>
+                                <h2>@cameron</h2>
+                                <p>cameron@email.com</p>
+                            </div>
+                            <div className='account-container_button'>
+                                <button>Settings</button>
+                            </div>
+                        </div>
+                        <div className='account-list'>
+                            <div className='account-list-item'>
+                                <p>Docs</p>
+                            </div>
+                            <div className='line'></div>
+                            <div className='account-list-item'>
+                                <p>Referrals</p>
+                            </div>
+                            <div className='line'></div>
+                            <div className='account-list-item'>
+                                <p>Help Center</p>
+                            </div>
+                            <div className='line'></div>
+                            <div className='account-list-item'>
+                                <p>Notifications</p>
+                            </div>
+                            <div className='line'></div>
+                            <div className='account-list-item'>
+                                <p style={{color: "#FF5C5C"}}>Sign out</p>
                             </div>
                         </div>
                     </div>

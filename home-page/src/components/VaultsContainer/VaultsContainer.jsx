@@ -15,12 +15,9 @@ function VaultsContainer() {
                         <span>Sort by APY</span>
                     </div>
                     <div className='Vaults-header-right'>
-                        <div className='Vaults-header-right_lend'>
-                            <p>Lend</p>
-                        </div>
-                        <div className='Vaults-header-right_Borrow'>
-                            <p>Borrow</p>
-                        </div>
+                            <button className='lend'>Lend</button>
+                            <button className='borrow'>Borrow</button>
+
                     </div>
                 </div>
 
@@ -47,19 +44,19 @@ function VaultsContainer() {
                     </div>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.USDCIcon} alt="" className='img-big'/>
+                            <img src={images.USDTIcon} alt="" className='img-big'/>
                             <img src={images.DynamicIcons} alt="" className='img-small'/>
                         </div>
                         <div className='Vaults-list-item_title'>
                             <div className='Vaults-list-item_title__left'>
                                 <p>Vault</p>
-                                <h2>USDC</h2>
+                                <h2>USDT</h2>
                                 <p>Balance</p>
                                 <span>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
                                 <p>APY</p>
-                                <h2>7.42%</h2>
+                                <h2>9.58%</h2>
                                 <p>Earnings</p>
                                 <span>-</span>
                             </div>                      
@@ -67,26 +64,26 @@ function VaultsContainer() {
                     </div>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.USDCIcon} alt="" className='img-big'/>
+                            <img src={images.BUSDIcon} alt="" className='img-big'/>
                             <img src={images.DynamicIcons} alt="" className='img-small'/>
                         </div>
                         <div className='Vaults-list-item_title'>
                             <div className='Vaults-list-item_title__left'>
                                 <p>Vault</p>
-                                <h2>USDC</h2>
+                                <h2>BUSD</h2>
                                 <p>Balance</p>
                                 <span>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
                                 <p>APY</p>
-                                <h2>7.42%</h2>
+                                <h2>3.77%</h2>
                                 <p>Earnings</p>
                                 <span>-</span>
                             </div>                      
                         </div>
                     </div>
                 </div>
-                <div className='Vaults-header'>
+                <div className='Vaults-header Vaults-native'>
                     <div className='Vaults-header-left'>
                         <p>Native</p>
                         <span>Sort by APY</span>
@@ -95,19 +92,19 @@ function VaultsContainer() {
                 <div className='Vaults-list'>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.USDCIcon} alt="" className='img-big'/>
+                            <img src={images.BTCIcon} alt="" className='img-big'/>
                             <img src={images.DynamicIcons} alt="" className='img-small'/>
                         </div>
                         <div className='Vaults-list-item_title'>
                             <div className='Vaults-list-item_title__left'>
                                 <p>Vault</p>
-                                <h2>USDC</h2>
+                                <h2>BTC</h2>
                                 <p>Balance</p>
                                 <span>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
                                 <p>APY</p>
-                                <h2>7.42%</h2>
+                                <h2>3.64%</h2>
                                 <p>Earnings</p>
                                 <span>-</span>
                             </div>                      
@@ -115,19 +112,19 @@ function VaultsContainer() {
                     </div>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.USDCIcon} alt="" className='img-big'/>
+                            <img src={images.ETHIcon} alt="" className='img-big'/>
                             <img src={images.DynamicIcons} alt="" className='img-small'/>
                         </div>
                         <div className='Vaults-list-item_title'>
                             <div className='Vaults-list-item_title__left'>
                                 <p>Vault</p>
-                                <h2>USDC</h2>
+                                <h2>ETH</h2>
                                 <p>Balance</p>
                                 <span>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
                                 <p>APY</p>
-                                <h2>7.42%</h2>
+                                <h2>4.82%</h2>
                                 <p>Earnings</p>
                                 <span>-</span>
                             </div>                      
@@ -135,19 +132,19 @@ function VaultsContainer() {
                     </div>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.USDCIcon} alt="" className='img-big'/>
+                            <img src={images.BNBIcon} alt="" className='img-big'/>
                             <img src={images.DynamicIcons} alt="" className='img-small'/>
                         </div>
                         <div className='Vaults-list-item_title'>
                             <div className='Vaults-list-item_title__left'>
                                 <p>Vault</p>
-                                <h2>USDC</h2>
+                                <h2>BNB</h2>
                                 <p>Balance</p>
                                 <span>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
                                 <p>APY</p>
-                                <h2>7.42%</h2>
+                                <h2>5.19%</h2>
                                 <p>Earnings</p>
                                 <span>-</span>
                             </div>                      
@@ -157,19 +154,19 @@ function VaultsContainer() {
                 <div className='Vaults-list'>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.USDCIcon} alt="" className='img-big'/>
+                            <img src={images.XRPIcon} alt="" className='img-big'/>
                             <img src={images.DynamicIcons} alt="" className='img-small'/>
                         </div>
                         <div className='Vaults-list-item_title'>
                             <div className='Vaults-list-item_title__left'>
                                 <p>Vault</p>
-                                <h2>USDC</h2>
+                                <h2>XRP</h2>
                                 <p>Balance</p>
                                 <span>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
                                 <p>APY</p>
-                                <h2>7.42%</h2>
+                                <h2>4.12%</h2>
                                 <p>Earnings</p>
                                 <span>-</span>
                             </div>                      
@@ -177,19 +174,19 @@ function VaultsContainer() {
                     </div>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.USDCIcon} alt="" className='img-big'/>
+                            <img src={images.DOTIcon} alt="" className='img-big'/>
                             <img src={images.DynamicIcons} alt="" className='img-small'/>
                         </div>
                         <div className='Vaults-list-item_title'>
                             <div className='Vaults-list-item_title__left'>
                                 <p>Vault</p>
-                                <h2>USDC</h2>
+                                <h2>DOT</h2>
                                 <p>Balance</p>
                                 <span>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
                                 <p>APY</p>
-                                <h2>7.42%</h2>
+                                <h2>3.98%</h2>
                                 <p>Earnings</p>
                                 <span>-</span>
                             </div>                      
@@ -197,19 +194,19 @@ function VaultsContainer() {
                     </div>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.USDCIcon} alt="" className='img-big'/>
+                            <img src={images.MATICIcon} alt="" className='img-big'/>
                             <img src={images.DynamicIcons} alt="" className='img-small'/>
                         </div>
                         <div className='Vaults-list-item_title'>
                             <div className='Vaults-list-item_title__left'>
                                 <p>Vault</p>
-                                <h2>USDC</h2>
+                                <h2>MATIC</h2>
                                 <p>Balance</p>
                                 <span>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
                                 <p>APY</p>
-                                <h2>7.42%</h2>
+                                <h2>2.63%</h2>
                                 <p>Earnings</p>
                                 <span>-</span>
                             </div>                      

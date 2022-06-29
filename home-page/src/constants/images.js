@@ -27,6 +27,13 @@ import CloseModal from '../assets/CloseModal.png'
 import Binance from '../assets/Binance.png'
 import Polygon from '../assets/Polygon.png'
 import DynamicIcons from '../assets/DynamicIcons.png'
+import BUSDIcon from '../assets/BUSDIcon.png';
+import ETHIcon from '../assets/ETHIcon.png';
+import BNBIcon from '../assets/BNBIcon.png';
+import XRPIcon from '../assets/XRPIcon.png'
+import Rectangle236 from '../assets/Rectangle236.png'
+import Rectangle141 from '../assets/Rectangle141.png';
+import qrpay from '../assets/qrpay.png';
 
 const images = {
     AVAXIcon,
@@ -57,6 +64,13 @@ const images = {
     CloseModal,
     Binance,
     Polygon,
-    DynamicIcons
+    DynamicIcons,
+    BUSDIcon,
+    ETHIcon,
+    XRPIcon,
+    BNBIcon,
+    Rectangle236,
+    Rectangle141,
+    qrpay
 };
 export default images;

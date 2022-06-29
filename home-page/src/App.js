@@ -4,6 +4,7 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Vaults from "./Pages/Vaults";
 import Swap from "./Pages/Swap";
+import Pay from "./Pages/Pay";
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="/vaults" element={<Vaults/>}/>
           <Route path="/swap" element={<Swap />}/>
-          <Route path="/pay" element={<Swap />}/>
+          <Route path="/pay" element={<Pay />}/>
         </Routes>
       </BrowserRouter>
     </>
