@@ -1,0 +1,52 @@
+.VaultsContainer {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-left: 42.78px;
+}
+
+.Vaults {
+    display: flex;
+    flex-direction: column;
+    background-color: green;
+    margin: 79px auto;
+}
+
+.Vaults-header {
+    display: flex;
+    flex-direction: row;
+    /* background-color: yellow; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Vaults-header-left {
+    display: flex;
+}
+
+.Vaults-header-left p {
+    font-family: 'Brinnan';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    color: #FFFFFF;
+}
+
+.Vaults-header-left span {
+    font-family: 'Brinnan';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: center;
+    color: #77838F;
+}
+.Vaults-header-right{
+    display: flex;
+    background-color: gray;
+}
