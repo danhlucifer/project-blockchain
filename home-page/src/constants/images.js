@@ -41,7 +41,8 @@ import Rectangle281 from '../assets/Rectangle281.png';
 import Rectangle280 from '../assets/Rectangle280.png';
 import Rectangle278 from '../assets/Rectangle278.png';
 import Rectangle277 from '../assets/Rectangle277.png';
- 
+import Rectangle336 from '../assets/Rectangle336.png'
+
 const images = {
     Rectangle276,
     Rectangle275,
@@ -50,6 +51,7 @@ const images = {
     Rectangle280,
     Rectangle278,
     Rectangle277,
+    Rectangle336,
     AVAXIcon,
     BTCIcon,
     ChaseBankIcon,

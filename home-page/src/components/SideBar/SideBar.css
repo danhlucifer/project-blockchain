@@ -56,6 +56,7 @@
 
 .sidebar__list-item {
     margin-bottom: 0.5rem;
+    text-decoration: none;
     width: 185px;
     height: 50px;
     display: flex;

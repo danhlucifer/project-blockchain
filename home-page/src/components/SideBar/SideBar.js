@@ -20,25 +20,35 @@ function SideBar() {
         </div>
 
         <ul className="sidebar__list">
-          <li className="sidebar__list-item">
+          <Link to='/' className="sidebar__list-item">
             <img src={images.HomeIcon} alt="homeicon" />
-            <Link to='/' className="sidebar__list-item-link">Home</Link>
-          </li>
-          <li className="sidebar__list-item">
+            <p className="sidebar__list-item-link">
+              Home
+            </p>
+          </Link>
+          <Link to="/vaults" className="sidebar__list-item">
             <img src={images.VaultsIcon} alt="VaultsIcon" />
-            <Link to='/vaults' className="sidebar__list-item-link">Vaults</Link>
-          </li>
-          <li className="sidebar__list-item">
+            <p  className="sidebar__list-item-link">
+              Vaults
+            </p>
+          </Link>
+          <Link to="/swap" className="sidebar__list-item">
             <img src={images.TransferIcon} alt="TransferIcon" />
-            <Link to='/swap' className="sidebar__list-item-link">Swap</Link>
-          </li>
-          <li className="sidebar__list-item">
+            <p  className="sidebar__list-item-link">
+              Swap
+            </p>
+          </Link>
+          <Link  to="/pay" className="sidebar__list-item">
             <img src={images.SwapIcon} alt="SwapIcon" />
-            <Link to='/pay' className="sidebar__list-item-link">Pay</Link>
-          </li>
+            <p to="/pay" className="sidebar__list-item-link">
+              Pay
+            </p>
+          </Link>
           <li className="sidebar__list-item">
             <img src={images.MoreIcon} alt="MoreIcon" />
-            <Link to='/pay' className="sidebar__list-item-link">More</Link>
+            <p className="sidebar__list-item-link">
+              More
+            </p>
           </li>
         </ul>
       </div>

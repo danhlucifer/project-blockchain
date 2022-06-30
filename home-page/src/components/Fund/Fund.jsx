@@ -1,15 +1,11 @@
 import React,{useState} from 'react';
 import './Fund.css';
 import images from '../../constants/images';
+import FundingModel from '../FundingModel/FundingModel';
 
 function Fund() {
-    const [popup, setPop] = useState(false);
-    const handleClickOpen = () => {
-        setPop(!popup);
-    }
-    const handleClose = () => {
-        setPop(false)
-    }
+    const [openModel, setOpenModel] = useState(false);
+
     return (
         <div>
             <div className="fund">
@@ -24,7 +20,9 @@ function Fund() {
                         </div>
                     </div>
 
-                    <div className="fund__chasebank-btn" onClick={handleClickOpen}>Change</div>
+                    <div className="fund__chasebank-btn" onClick={() => {
+                        setOpenModel(true)
+                    }}>Change</div>
                 </div>
 
                 <div className="fund__input-first">
@@ -52,66 +50,7 @@ function Fund() {
                     Withdraw Funds
                 </button>
             </div>
-            {popup ?
-                    <div className='Funding-model'>
-                        <div className='Funding-Source'>
-                            <div className='Funding-Source-top'>
-                                <h3 className='Funding-Source-top_header'>
-                                    Funding Source
-                                </h3>
-                                <div className='Funding-Source-top_close' onClick={handleClose}>
-                                    <img src={images.CloseModal} alt="" />
-                                </div>
-                            </div>
-                            <div className='line'></div>
-                            <div className='Funding-Source-bot'>
-                                <div className='Funding-Source-bot_title'>
-                                    <div className='Funding-Source-bot_title-title2'>
-                                        <p>
-                                            Bank account
-                                        </p>
-                                        <span>Connect new</span>
-                                    </div>
-                                    <button className='Funding-Source-bot_title-box'>
-                                        Current
-                                    </button>
-                                </div>
-                                <div className='line'></div>
-                                <div className='Funding-Source-bot_title'>
-                                    <div className='Funding-Source-bot_title-title2'>
-                                        <p>
-                                            Debit / Credit
-                                        </p>
-                                        <span>Add card</span>
-
-                                    </div>
-                                </div>
-                                <div className='line'></div>
-                                <div className='Funding-Source-bot_title'>
-                                    <div className='Funding-Source-bot_title-title2'>
-                                        <p>
-                                            Wire transfer
-                                        </p>
-                                        <span>More info</span>
-
-                                    </div>
-                                </div>
-                                <div className='line'></div>
-                                <div className='Funding-Source-bot_title'>
-                                    <div className='Funding-Source-bot_title-title2'>
-                                        <p>
-                                            Crypto
-                                        </p>
-                                        <span>0x23..4935</span>
-
-                                        <div className='Funding-Source-bot_title-copy'>
-                                            <img src={images.Rectangle258} alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> : ""}
+            {openModel &&<FundingModel closeModel={setOpenModel}/>}
         </div>
     )
 }
