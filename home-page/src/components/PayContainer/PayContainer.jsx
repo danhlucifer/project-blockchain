@@ -3,7 +3,7 @@ import images from '../../constants/images';
 import TopBar from '../TopBar/TopBar';
 import './PayContainer.css'
 function PayContainer() {
-    const [receive, setReceive] = useState(true);
+    const [receive, setReceive] = useState(false);
     return (
         <>
             <div className='PayContainer'>
@@ -13,7 +13,7 @@ function PayContainer() {
                         <div className='Pay-box_left-header'>
                             <div className='left-header send' onClick={() => {
                                 setReceive(() => ({
-                                    receive: true,
+                                    receive: false,
                                 }));
                             }} >
                                 <h2>Send</h2>
@@ -21,7 +21,7 @@ function PayContainer() {
                             <div className='dash'></div>
                             <div className='left-header receive' onClick={() => {
                                 setReceive(() => ({
-                                    receive: false,
+                                    receive: true,
                                 }));
                             }} >
                                 <h2>Receive</h2>
@@ -29,7 +29,7 @@ function PayContainer() {
                         </div>
                         <div className='line'></div>
 
-                        {receive.receive === true ?
+                        {receive.receive === false ?
                             <div className='Pay-box_left-title'>
                                 <div className='Pay-box_left-title_top'>
                                     <div className='Pay-box_left-title_top-dollar'>

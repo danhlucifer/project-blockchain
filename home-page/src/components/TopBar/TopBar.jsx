@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import images from '../../constants/images';
 import './TopBar.css';
+import {Link} from 'react-router-dom'
 
 function TopBar({title}) {
     const [popup, setPop] = useState(false);
@@ -34,7 +35,7 @@ function TopBar({title}) {
                             Ethereum
                         </p>
                     </div>
-                    <div className='Topbar__list-item_notify'>
+                    <Link to='/Notifica' className='Topbar__list-item_notify'>
                         <img
                             className='img-bell'
                             src={images.NotificationsIcon}
@@ -45,7 +46,7 @@ function TopBar({title}) {
                             src={images.Notificationalert}
                             alt='notifyalert'
                         />
-                    </div>
+                    </Link>
 
                     <div className='dash' />
                     <div className='Topbar__list-item_avatar' onClick={handleClickOpenAccount}>
@@ -122,19 +123,19 @@ function TopBar({title}) {
                         </div>
                         <div className='account-list'>
                             <div className='account-list-item'>
-                                <p>Docs</p>
+                                <p className='account-list-item_p'>Docs</p>
                             </div>
                             <div className='line'></div>
                             <div className='account-list-item'>
-                                <p>Referrals</p>
+                                <Link to="/referrals" className='account-list-item_p'>Referrals</Link>
                             </div>
                             <div className='line'></div>
                             <div className='account-list-item'>
-                                <p>Help Center</p>
+                                <p className='account-list-item_p'>Help Center</p>
                             </div>
                             <div className='line'></div>
                             <div className='account-list-item'>
-                                <p>Notifications</p>
+                                <Link to='/Notifica' className='account-list-item_p'>Notification</Link>
                             </div>
                             <div className='line'></div>
                             <div className='account-list-item'>

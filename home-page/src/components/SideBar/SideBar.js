@@ -38,7 +38,7 @@ function SideBar() {
           </li>
           <li className="sidebar__list-item">
             <img src={images.MoreIcon} alt="MoreIcon" />
-            <Link to='/' className="sidebar__list-item-link">More</Link>
+            <Link to='/pay' className="sidebar__list-item-link">More</Link>
           </li>
         </ul>
       </div>
