@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import images from '../../constants/images';
+import SelectToken from '../SelectToken/SelectToken';
 import TopBar from '../TopBar/TopBar';
 import './PayContainer.css'
 function PayContainer() {
     const [receive, setReceive] = useState(false);
+    const [openSelectModel, setOpenSelectModel] = useState(false);
     return (
         <>
             <div className='PayContainer'>
@@ -30,6 +32,7 @@ function PayContainer() {
                         <div className='line'></div>
 
                         {receive.receive === false ?
+                        // send
                             <div className='Pay-box_left-title'>
                                 <div className='Pay-box_left-title_top'>
                                     <div className='Pay-box_left-title_top-dollar'>
@@ -48,13 +51,18 @@ function PayContainer() {
                                         <div className='bot-list-left'>
                                             <p>Pay with</p>
                                         </div>
-                                        <div className='bot-pay-right'>
+                                        <div className='bot-pay-right' onClick={() =>{
+                                            setOpenSelectModel(true)
+                                        }}>
                                             <div className='bot-list-right_imgl'>
-                                                <img src={images.Rectangle141} alt="" /></div>
+                                                <img src={images.Rectangle141} alt="" />
+                                            </div>
                                             <div className='bot-pay-right_USDC'>
-                                                <p>USDC</p></div>
+                                                <p>USDC</p>
+                                            </div>
                                             <div className='bot-list-right_imgr'>
-                                                <img src={images.DropdownIcon} alt="" /></div>
+                                                <img src={images.DropdownIcon} alt="" />
+                                            </div>
                                         </div>
                                     </div>
                                     <div className='line'></div>
@@ -95,7 +103,9 @@ function PayContainer() {
                                     <div className='assets__left'>
                                         <p>Assets</p>
                                     </div>
-                                    <div className='bot-pay-right'>
+                                    <div className='bot-pay-right' onClick={() =>{
+                                        setOpenSelectModel(true)
+                                    }}>
                                         <div className='bot-list-right_imgl'>
                                             <img src={images.Rectangle141} alt="" /></div>
                                         <div className='bot-pay-right_USDC'>
@@ -110,7 +120,7 @@ function PayContainer() {
                             </div>}
 
 
-
+                        {openSelectModel && <SelectToken closeSelectModel={setOpenSelectModel}/>}
                         {/* footer */}
                         <div className='Pay-box_left-footer'>
                             <div className='footer-title'>

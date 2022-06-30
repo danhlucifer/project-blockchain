@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Stroll from '../Stroll/Stroll';
 import Portfolio from '../Portfolio/Portfolio';
 import Assets from '../Assets/Assets';
@@ -10,13 +10,6 @@ import TopBar from '../TopBar/TopBar';
 import Fund from '../Fund/Fund';
 
 function HomeContainer() {
-    const [popup, setPop] = useState(false);
-    const handleClickOpen = () => {
-        setPop(!popup);
-    }
-    const handleClose = () => {
-        setPop(false)
-    }
     return (
         <>
             <div className='homecontainer'>
@@ -165,9 +158,6 @@ function HomeContainer() {
 
                     </div>
                 </div>
-               
-                
-
             </div>
 
         </>

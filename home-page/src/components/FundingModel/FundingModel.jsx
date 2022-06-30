@@ -3,7 +3,7 @@ import './FundingModel.css';
 import images from '../../constants/images';
 import '../Fund/Fund'
 
-function FundingModel({closeModel}) {
+function FundingModel({closeFundingModel}) {
 
     return (
         <>
@@ -13,7 +13,7 @@ function FundingModel({closeModel}) {
                         <h3 className='Funding-Source-top_header'>
                             Funding Source
                         </h3>
-                        <div className='Funding-Source-top_close' onClick={() => closeModel(false)}>
+                        <div className='Funding-Source-top_close' onClick={() => closeFundingModel(!true)}>
                             <img src={images.CloseModal} alt="" />
                         </div>
                     </div>

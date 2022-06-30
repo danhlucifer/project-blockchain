@@ -1,10 +1,12 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './Fund.css';
 import images from '../../constants/images';
 import FundingModel from '../FundingModel/FundingModel';
+import SelectToken from '../SelectToken/SelectToken';
 
 function Fund() {
-    const [openModel, setOpenModel] = useState(false);
+    const [openFundingModel, setOpenFundingModel] = useState(false);
+    const [openSelectModel, setOpenSelectModel] = useState(false);
 
     return (
         <div>
@@ -21,7 +23,7 @@ function Fund() {
                     </div>
 
                     <div className="fund__chasebank-btn" onClick={() => {
-                        setOpenModel(true)
+                        setOpenFundingModel(true)
                     }}>Change</div>
                 </div>
 
@@ -35,7 +37,9 @@ function Fund() {
 
                 <div className="fund__input-second">
                     <p>0.00</p>
-                    <div className="fund__input-btn">
+                    <div className="fund__input-btn" onClick={() => {
+                        setOpenSelectModel(true)
+                    }}>
                         <img src={images.USDCIcon} alt="USDCIcon" />
                         <p>USDC</p>
                         <img src={images.DropdownIcon} alt="DropdownIcon" />
@@ -50,8 +54,12 @@ function Fund() {
                     Withdraw Funds
                 </button>
             </div>
-            {openModel &&<FundingModel closeModel={setOpenModel}/>}
+            {openFundingModel && <FundingModel closeFundingModel={setOpenFundingModel} />}
+            {openSelectModel && <SelectToken  closeSelectModel={setOpenSelectModel}/>}
+
+           
         </div>
+
     )
 }
 
