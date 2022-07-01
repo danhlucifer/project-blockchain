@@ -1,13 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react'
 import images from '../../constants/images'
 import TopBar from '../TopBar/TopBar';
 import './VaultsContainer.css'
+import { Link } from "react-router-dom";
 
 function VaultsContainer() {
-  return (
-    <>
+    const [popup, setPop] = useState(false);
+    const handleClickOpenmodel = () => {
+        setPop(!popup)
+    }
+    const closePopup = () => {
+        setPop(false);
+    }
+
+    const [deposit, setDeposit] = useState(true);
+    return (
+        <>
         <div className='VaultsContainer'>
-            <TopBar title="Vaults"/>
+            <TopBar title="Vaults" />
             <div className='Vaults'>
                 <div className='Vaults-header'>
                     <div className='Vaults-header-left'>
@@ -15,8 +25,8 @@ function VaultsContainer() {
                         <span>Sort by APY</span>
                     </div>
                     <div className='Vaults-header-right'>
-                            <button className='lend'>Lend</button>
-                            <button className='borrow'>Borrow</button>
+                        <button className='lend'>Lend</button>
+                        <button className='borrow'><Link to='/swap'>Borrow</Link></button>
 
                     </div>
                 </div>
@@ -24,62 +34,62 @@ function VaultsContainer() {
                 <div className='Vaults-list'>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.USDCIcon} alt="" className='img-big'/>
-                            <img src={images.DynamicIcons} alt="" className='img-small'/>
+                            <img src={images.USDCIcon} alt="" className='img-big' />
+                            <img src={images.DynamicIcons} alt="" className='img-small' />
                         </div>
-                        <div className='Vaults-list-item_title'>
+                        <div className='Vaults-list-item_title' onClick={handleClickOpenmodel}>
                             <div className='Vaults-list-item_title__left'>
-                                <p>Vault</p>
-                                <h2>USDC</h2>
-                                <p>Balance</p>
-                                <span>-</span>
+                            <p  onClick={handleClickOpenmodel}>Vault</p>
+                                <h2 onClick={handleClickOpenmodel}>USDC</h2>
+                                <p  onClick={handleClickOpenmodel}>Balance</p>
+                                <span onClick={handleClickOpenmodel}>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
-                                <p>APY</p>
-                                <h2>7.42%</h2>
-                                <p>Earnings</p>
-                                <span>-</span>
-                            </div>                      
+                            <p  onClick={handleClickOpenmodel}>APY</p>
+                                <h2  onClick={handleClickOpenmodel}>7.42%</h2>
+                                <p  onClick={handleClickOpenmodel}>Earnings</p>
+                                <span  onClick={handleClickOpenmodel}>-</span>
+                            </div>
                         </div>
                     </div>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.USDTIcon} alt="" className='img-big'/>
-                            <img src={images.DynamicIcons} alt="" className='img-small'/>
+                            <img src={images.USDTIcon} alt="" className='img-big' />
+                            <img src={images.DynamicIcons} alt="" className='img-small' />
                         </div>
-                        <div className='Vaults-list-item_title'>
+                        <div className='Vaults-list-item_title' onClick={handleClickOpenmodel}>
                             <div className='Vaults-list-item_title__left'>
-                                <p>Vault</p>
-                                <h2>USDT</h2>
-                                <p>Balance</p>
-                                <span>-</span>
+                            <p  onClick={handleClickOpenmodel}>Vault</p>
+                                <h2 onClick={handleClickOpenmodel}>USDC</h2>
+                                <p  onClick={handleClickOpenmodel}>Balance</p>
+                                <span onClick={handleClickOpenmodel}>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
-                                <p>APY</p>
-                                <h2>9.58%</h2>
-                                <p>Earnings</p>
-                                <span>-</span>
-                            </div>                      
+                            <p  onClick={handleClickOpenmodel}>APY</p>
+                                <h2  onClick={handleClickOpenmodel}>7.42%</h2>
+                                <p  onClick={handleClickOpenmodel}>Earnings</p>
+                                <span  onClick={handleClickOpenmodel}>-</span>
+                            </div>
                         </div>
                     </div>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.BUSDIcon} alt="" className='img-big'/>
-                            <img src={images.DynamicIcons} alt="" className='img-small'/>
+                            <img src={images.BUSDIcon} alt="" className='img-big' />
+                            <img src={images.DynamicIcons} alt="" className='img-small' />
                         </div>
-                        <div className='Vaults-list-item_title'>
+                        <div className='Vaults-list-item_title' onClick={handleClickOpenmodel}>
                             <div className='Vaults-list-item_title__left'>
-                                <p>Vault</p>
-                                <h2>BUSD</h2>
-                                <p>Balance</p>
-                                <span>-</span>
+                            <p  onClick={handleClickOpenmodel}>Vault</p>
+                                <h2 onClick={handleClickOpenmodel}>USDC</h2>
+                                <p  onClick={handleClickOpenmodel}>Balance</p>
+                                <span onClick={handleClickOpenmodel}>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
-                                <p>APY</p>
-                                <h2>3.77%</h2>
-                                <p>Earnings</p>
-                                <span>-</span>
-                            </div>                      
+                            <p  onClick={handleClickOpenmodel}>APY</p>
+                                <h2  onClick={handleClickOpenmodel}>7.42%</h2>
+                                <p  onClick={handleClickOpenmodel}>Earnings</p>
+                                <span  onClick={handleClickOpenmodel}>-</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -92,131 +102,202 @@ function VaultsContainer() {
                 <div className='Vaults-list'>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.BTCIcon} alt="" className='img-big'/>
-                            <img src={images.DynamicIcons} alt="" className='img-small'/>
+                            <img src={images.BTCIcon} alt="" className='img-big' />
+                            <img src={images.DynamicIcons} alt="" className='img-small' />
                         </div>
-                        <div className='Vaults-list-item_title'>
+                        <div className='Vaults-list-item_title' onClick={handleClickOpenmodel}>
                             <div className='Vaults-list-item_title__left'>
-                                <p>Vault</p>
-                                <h2>BTC</h2>
-                                <p>Balance</p>
-                                <span>-</span>
+                            <p  onClick={handleClickOpenmodel}>Vault</p>
+                                <h2 onClick={handleClickOpenmodel}>USDC</h2>
+                                <p  onClick={handleClickOpenmodel}>Balance</p>
+                                <span onClick={handleClickOpenmodel}>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
-                                <p>APY</p>
-                                <h2>3.64%</h2>
-                                <p>Earnings</p>
-                                <span>-</span>
-                            </div>                      
+                            <p  onClick={handleClickOpenmodel}>APY</p>
+                                <h2  onClick={handleClickOpenmodel}>7.42%</h2>
+                                <p  onClick={handleClickOpenmodel}>Earnings</p>
+                                <span  onClick={handleClickOpenmodel}>-</span>
+                            </div>
                         </div>
                     </div>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.ETHIcon} alt="" className='img-big'/>
-                            <img src={images.DynamicIcons} alt="" className='img-small'/>
+                            <img src={images.ETHIcon} alt="" className='img-big' />
+                            <img src={images.DynamicIcons} alt="" className='img-small' />
                         </div>
-                        <div className='Vaults-list-item_title'>
-                            <div className='Vaults-list-item_title__left'>
-                                <p>Vault</p>
-                                <h2>ETH</h2>
-                                <p>Balance</p>
-                                <span>-</span>
+                        <div className='Vaults-list-item_title' onClick={handleClickOpenmodel}>
+                            <div className='Vaults-list-item_title__left'  onClick={handleClickOpenmodel}>
+                                <p  onClick={handleClickOpenmodel}>Vault</p>
+                                <h2 onClick={handleClickOpenmodel}>USDC</h2>
+                                <p  onClick={handleClickOpenmodel}>Balance</p>
+                                <span onClick={handleClickOpenmodel}>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
-                                <p>APY</p>
-                                <h2>4.82%</h2>
-                                <p>Earnings</p>
-                                <span>-</span>
-                            </div>                      
+                                <p onClick={handleClickOpenmodel}>APY</p>
+                                <h2  onClick={handleClickOpenmodel}>7.42%</h2>
+                                <p  onClick={handleClickOpenmodel}>Earnings</p>
+                                <span  onClick={handleClickOpenmodel}>-</span>
+                            </div>
                         </div>
                     </div>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.BNBIcon} alt="" className='img-big'/>
-                            <img src={images.DynamicIcons} alt="" className='img-small'/>
+                            <img src={images.BNBIcon} alt="" className='img-big' />
+                            <img src={images.DynamicIcons} alt="" className='img-small' />
                         </div>
-                        <div className='Vaults-list-item_title'>
+                        <div className='Vaults-list-item_title' onClick={handleClickOpenmodel}>
                             <div className='Vaults-list-item_title__left'>
-                                <p>Vault</p>
-                                <h2>BNB</h2>
-                                <p>Balance</p>
+                                <p  onClick={handleClickOpenmodel}>Vault</p>
+                                <h2  onClick={handleClickOpenmodel}>USDC</h2>
+                                <p  onClick={handleClickOpenmodel}>Balance</p>
                                 <span>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
-                                <p>APY</p>
-                                <h2>5.19%</h2>
-                                <p>Earnings</p>
-                                <span>-</span>
-                            </div>                      
+                                <p  onClick={handleClickOpenmodel}>APY</p>
+                                <h2  onClick={handleClickOpenmodel}>7.42%</h2>
+                                <p  onClick={handleClickOpenmodel}>Earnings</p>
+                                <span  onClick={handleClickOpenmodel}>-</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div className='Vaults-list'>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.XRPIcon} alt="" className='img-big'/>
-                            <img src={images.DynamicIcons} alt="" className='img-small'/>
+                            <img src={images.MATICIcon} alt="" className='img-big' />
+                            <img src={images.DynamicIcons} alt="" className='img-small' />
                         </div>
-                        <div className='Vaults-list-item_title'>
+                        <div className='Vaults-list-item_title' onClick={handleClickOpenmodel}>
                             <div className='Vaults-list-item_title__left'>
                                 <p>Vault</p>
-                                <h2>XRP</h2>
+                                <h2>USDC</h2>
                                 <p>Balance</p>
                                 <span>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
-                                <p>APY</p>
-                                <h2>4.12%</h2>
-                                <p>Earnings</p>
-                                <span>-</span>
-                            </div>                      
+                            <p  onClick={handleClickOpenmodel}>APY</p>
+                                <h2  onClick={handleClickOpenmodel}>7.42%</h2>
+                                <p  onClick={handleClickOpenmodel}>Earnings</p>
+                                <span  onClick={handleClickOpenmodel}>-</span>
+                            </div>
                         </div>
                     </div>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.DOTIcon} alt="" className='img-big'/>
-                            <img src={images.DynamicIcons} alt="" className='img-small'/>
+                            <img src={images.BNBIcon} alt="" className='img-big' />
+                            <img src={images.DynamicIcons} alt="" className='img-small' />
                         </div>
-                        <div className='Vaults-list-item_title'>
+                        <div className='Vaults-list-item_title' onClick={handleClickOpenmodel}>
                             <div className='Vaults-list-item_title__left'>
                                 <p>Vault</p>
-                                <h2>DOT</h2>
+                                <h2>USDC</h2>
                                 <p>Balance</p>
                                 <span>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
-                                <p>APY</p>
-                                <h2>3.98%</h2>
-                                <p>Earnings</p>
-                                <span>-</span>
-                            </div>                      
+                            <p  onClick={handleClickOpenmodel}>APY</p>
+                                <h2  onClick={handleClickOpenmodel}>7.42%</h2>
+                                <p  onClick={handleClickOpenmodel}>Earnings</p>
+                                <span  onClick={handleClickOpenmodel}>-</span>
+                            </div>
                         </div>
                     </div>
                     <div className='Vaults-list-item'>
                         <div className='Vaults-list-item_img'>
-                            <img src={images.MATICIcon} alt="" className='img-big'/>
-                            <img src={images.DynamicIcons} alt="" className='img-small'/>
+                            <img src={images.XRPIcon} alt="" className='img-big' />
+                            <img src={images.DynamicIcons} alt="" className='img-small' />
                         </div>
-                        <div className='Vaults-list-item_title'>
+                        <div className='Vaults-list-item_title' onClick={handleClickOpenmodel}>
                             <div className='Vaults-list-item_title__left'>
                                 <p>Vault</p>
-                                <h2>MATIC</h2>
+                                <h2>USDC</h2>
                                 <p>Balance</p>
                                 <span>-</span>
                             </div>
                             <div className='Vaults-list-item_title__right'>
-                                <p>APY</p>
-                                <h2>2.63%</h2>
-                                <p>Earnings</p>
-                                <span>-</span>
-                            </div>                      
+                            <p  onClick={handleClickOpenmodel}>APY</p>
+                                <h2  onClick={handleClickOpenmodel}>7.42%</h2>
+                                <p  onClick={handleClickOpenmodel}>Earnings</p>
+                                <span  onClick={handleClickOpenmodel}>-</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                {popup ?
+                    <div className='main'>
+
+                        <div className='Vaults-table'>
+                            <div className='table-header'>
+                                <div className='Usdc-header'>
+                                    <h1>USDC Vault </h1>
+                                    <h5 className='Deposit' onClick={() =>{
+                                        setDeposit(() => ({
+                                            deposit: true,
+                                        }));
+                                    }}>Deposit</h5>
+                                    <h5 className='Redeem' onClick={() =>{
+                                        setDeposit(() => ({
+                                            deposit: false,
+                                        }));
+                                    }}>Redeem</h5>
+
+                                </div>
+                                <div className='table-header_close' onClick={closePopup} >
+                                    <img src={images.CloseModal} alt="" />
+                                </div>
+                            </div>
+                            {deposit.deposit === true ? <div className='table-deposit'>
+                                <div className='table-number'>
+                                    <div className='Depositt'>
+                                        <div className='table-icon'>$</div>
+                                        <div className='table-numberr'>10,000</div>
+                                    </div>
+                                    <div className='table-max'>Max</div>
+                                </div>
+                                <div className='Loop'>
+                                    <h1>Loop</h1>
+                                    <input className='checkbox' type="checkbox" />
+                                </div>
+                                <div className='Rectanglee'>
+                                    <button>2X</button>
+                                    <button>4X</button>
+                                    <button>6X</button>
+                                    <button>8X</button>
+
+                                </div>
+                                <div className='Balance'>
+                                    <div className='balace'>Balance</div>
+                                    <div className='price'>10,000USDC</div>
+                                </div>
+                                <div className='end'>
+                                    <h3>Deposit Funds   </h3>
+                                </div>
+                            </div> : <div className='table-redeem'>
+                                <div className='table-number'>
+                                    <div className='Depositt'>
+                                        <div className='table-icon'>$</div>
+                                        <div className='table-numberr'>10,000</div>
+                                    </div>
+                                    <div className='table-max'>Max</div>
+                                </div>
+                                
+                                <div className='Balance Balance-redeem'>
+                                    <div className='balace'>Balance</div>
+                                    <div className='price'>10,000USDC</div>
+                                </div>
+                                <div className='end'>
+                                    <h3>Deposit Funds   </h3>
+                                </div>
+                            </div>}
+
+                            
+                        </div>
+                    </div> : ""}
             </div>
         </div>
+
     </>
-  )
+    )
 }
 
 export default VaultsContainer

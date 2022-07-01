@@ -40,7 +40,9 @@ function PayContainer() {
                                         <h1>O</h1>
                                     </div>
                                     <div className='Pay-box_left-title_top-convert'>
-                                        <div className='convert'>
+                                        <div className='convert' onClick={() =>{
+                                            setOpenSelectModel(true)
+                                        }}>
                                             <img src={images.Rectangle236} alt="" />
                                         </div>
                                         <p>USDC</p>

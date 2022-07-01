@@ -118,6 +118,7 @@
     border: 1px solid #363636;
     border-radius: 50%;
     margin-right: 4px;
+    cursor: pointer;
 }
 
 .Pay-box_left-title_top-convert .convert img {
