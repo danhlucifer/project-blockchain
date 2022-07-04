@@ -8,7 +8,7 @@ function SideBar() {
   return (
     <>
       <div className="sidebar">
-        <div className="sidebar__head">
+        <Link to='/' className="sidebar__head">
           <div className="sidebar__head-logo">
             <img src={images.DynamicIcon} alt="dynamicicon" />
           </div>
@@ -17,7 +17,7 @@ function SideBar() {
             <h3 className="sidebar__head-text_title">Dynamic</h3>
             <p className="sidebar__head-text_desc">Put your funds to work</p>
           </div>
-        </div>
+        </Link>
 
         <ul className="sidebar__list">
           <Link to='/' className="sidebar__list-item">

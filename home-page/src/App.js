@@ -9,6 +9,8 @@ import Settings from "./Pages/Settings";
 import Notifica from "./Pages/Notifica";
 import Referrals from "./Pages/Referrals";
 import Swap from "./Pages/Swap";
+import Stake from "./Pages/Stake";
+import Logout from "./Pages/Logout";
 
 function App() {
   return (
@@ -22,6 +24,9 @@ function App() {
           <Route path="/notifica" element={<Notifica />}/>
           <Route path="/settings" element={<Settings/>}/>
           <Route path="/referrals" element={<Referrals />}/>
+          <Route path="/stake" element={<Stake />}/>
+          <Route path="/logout" element={<Logout />}/>
+          
         </Routes>
       </BrowserRouter>
     </>

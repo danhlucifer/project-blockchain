@@ -139,7 +139,9 @@ function TopBar({ title }) {
                                 </div>
                                 <div className="line"></div>
                                 <div className="account-list-item">
-                                    <p className="account-list-item_p">Help Center</p>
+                                    <Link to='/stake' className="account-list-item_p">
+                                        Help Center
+                                    </Link>
                                 </div>
                                 <div className="line"></div>
                                 <div className="account-list-item">
@@ -149,7 +151,7 @@ function TopBar({ title }) {
                                 </div>
                                 <div className="line"></div>
                                 <div className="account-list-item">
-                                    <p style={{ color: "#FF5C5C" }}>Sign out</p>
+                                    <Link to='/logout' style={{ color: "#FF5C5C" }} className="account-list-item_p">Sign out</Link>
                                 </div>
                             </div>
                         </div>
